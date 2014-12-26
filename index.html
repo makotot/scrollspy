@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<title>scrollspy</title>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<div id="js-scrollspy">
+			<ul class="js-scrollspy-nav nav">
+				<li>
+					<a href="#">one</a>
+					<ul class="js-sub-scrollspy-nav">
+						<li><a href="#">sub one</a></li>
+						<li><a href="#">sub two</a></li>
+						<li><a href="#">sub three</a></li>
+						<li><a href="#">sub four</a></li>
+						<li><a href="#">sub five</a></li>
+					</ul>
+				</li>
+				<li><a href="#">two</a></li>
+				<li><a href="#">three</a></li>
+				<li><a href="#">four</a></li>
+			</ul>
+			<ul class="js-scrollspy-content content">
+				<li>
+					one
+					<ul class="js-sub-scrollspy-content sub-content">
+						<li>sub one</li>
+						<li>sub two</li>
+						<li>sub three</li>
+						<li>sub four</li>
+						<li>sub five</li>
+					</ul>
+				</li>
+				<li>two</li>
+				<li>three</li>
+				<li>four</li>
+			</ul>
+		</div>
+
+		<script src="./scrollspy.js"></script>
+		<script>
+			var spy = new ScrollSpy({
+				wrapper: '#js-scrollspy',
+				nav: '.js-scrollspy-nav > li',
+				contents: '.js-scrollspy-content > li',
+				className: 'is-inview',
+				callback: function () {
+				}
+			});
+
+			spy.init();
+
+			var subSpy = new ScrollSpy({
+				wrapper: '#js-scrollspy',
+				nav: '.js-sub-scrollspy-nav > li',
+				contents: '.js-sub-scrollspy-content > li',
+				className: 'is-inview'
+			});
+
+			subSpy.init();
+		</script>
+	</body>
+</html>
