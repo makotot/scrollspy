@@ -16,6 +16,10 @@ module.exports = function (grunt) {
       }
     },
 
+    eslint: {
+      target: ['./src/js/scrollspy.js']
+    },
+
     uglify: {
       dev: {
         options: {},
@@ -63,7 +67,7 @@ module.exports = function (grunt) {
 
   });
 
-  grunt.registerTask('default', ['umd']);
+  grunt.registerTask('default', ['eslint', 'umd']);
   grunt.registerTask('serve', ['umd', 'connect', 'watch']);
-  grunt.registerTask('build', ['umd', 'uglify']);
+  grunt.registerTask('build', ['eslint', 'umd', 'uglify']);
 };
