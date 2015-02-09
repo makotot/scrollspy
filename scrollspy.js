@@ -24,8 +24,9 @@ function ScrollSpy (opt) {
 
   this.wrapper = doc.querySelector(opt.wrapper);
   this.nav = this.wrapper.querySelectorAll(opt.nav);
-  this.contents = this.wrapper.querySelectorAll(opt.contents);
+//  this.contents = this.wrapper.querySelectorAll(opt.contents);
 
+  this.contents = [];
   this.win = window;
   this.body = doc.body;
 
@@ -37,7 +38,18 @@ function ScrollSpy (opt) {
 }
 
 ScrollSpy.prototype.init = function () {
+  this.contents = this.getContents();
   this.attachEvent();
+};
+
+ScrollSpy.prototype.getContents = function () {
+  var targetList = [];
+
+  for (var i = 0, max = this.nav.length; i < max; i++) {
+    targetList.push(document.getElementById((this.nav[i].href).split('#')[1]));
+  }
+
+  return targetList;
 };
 
 ScrollSpy.prototype.attachEvent = function () {

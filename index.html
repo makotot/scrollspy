@@ -9,7 +9,7 @@
 			<ul class="js-scrollspy-nav nav">
 				<li>
 					<a href="#one">one</a>
-					<ul class="js-sub-scrollspy-nav">
+					<ul class="sub-nav js-sub-scrollspy-nav">
 						<li><a href="#sub-one">sub one</a></li>
 						<li><a href="#sub-two">sub two</a></li>
 						<li><a href="#sub-three">sub three</a></li>
@@ -42,8 +42,8 @@
 		<script>
 			var spy = new ScrollSpy({
 				wrapper: '#js-scrollspy',
-				nav: '.js-scrollspy-nav > li',
-				contents: '.js-scrollspy-content > li',
+				nav: '.js-scrollspy-nav > li > a',
+//				contents: '.js-scrollspy-content > li',
 				className: 'is-inview',
 				callback: function () {
 				}
@@ -53,8 +53,8 @@
 
 			var subSpy = new ScrollSpy({
 				wrapper: '#js-scrollspy',
-				nav: '.js-sub-scrollspy-nav > li',
-				contents: '.js-sub-scrollspy-content > li',
+				nav: '.js-sub-scrollspy-nav > li > a',
+//				contents: '.js-sub-scrollspy-content > li',
 				className: 'is-inview'
 			});
 
