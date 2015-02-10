@@ -46,7 +46,9 @@ ScrollSpy.prototype.getContents = function () {
   var targetList = [];
 
   for (var i = 0, max = this.nav.length; i < max; i++) {
-    targetList.push(document.getElementById((this.nav[i].href).split('#')[1]));
+    var href = this.nav[i].href;
+
+    targetList.push(document.getElementById(href.split('#')[1]));
   }
 
   return targetList;
