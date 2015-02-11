@@ -6,25 +6,28 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     umd: {
-      all: {
-        options: {
-          src: './src/js/scrollspy.js',
-          dest: './scrollspy.js',
-          objectToExport: 'ScrollSpy',
-          globalAlias: 'ScrollSpy'
-        }
+      plain: {
+        src: './src/js/scrollspy.js',
+        dest: './scrollspy.js',
+        objectToExport: 'ScrollSpy',
+        globalAlias: 'ScrollSpy'
+      },
+      jquery: {
+        src: './src/js/jquery.scrollspy.js',
+        dest: './jquery.scrollspy.js'
       }
     },
 
     eslint: {
-      target: ['./src/js/scrollspy.js']
+      target: ['./src/js/*.js']
     },
 
     uglify: {
       dev: {
         options: {},
         files: {
-          './scrollspy.min.js': ['./scrollspy.js']
+          './scrollspy.min.js': ['./scrollspy.js'],
+          './jquery.scrollspy.min.js': ['./jquery.scrollspy.js']
         }
       }
     },

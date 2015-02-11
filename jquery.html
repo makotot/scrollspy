@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<title>scrollspy</title>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<div id="js-scrollspy">
+			<ul class="js-scrollspy-nav nav">
+				<li>
+					<a href="#one">one</a>
+					<ul class="sub-nav js-sub-scrollspy-nav">
+						<li><a href="#sub-one">sub one</a></li>
+						<li><a href="#sub-two">sub two</a></li>
+						<li><a href="#sub-three">sub three</a></li>
+						<li><a href="#sub-four">sub four</a></li>
+						<li><a href="#sub-five">sub five</a></li>
+					</ul>
+				</li>
+				<li><a href="#two">two</a></li>
+				<li><a href="#three">three</a></li>
+				<li><a href="#four">four</a></li>
+			</ul>
+			<ul class="js-scrollspy-content content">
+				<li id="one">
+					one
+					<ul class="js-sub-scrollspy-content sub-content">
+						<li id="sub-one">sub one</li>
+						<li id="sub-two">sub two</li>
+						<li id="sub-three">sub three</li>
+						<li id="sub-four">sub four</li>
+						<li id="sub-five">sub five</li>
+					</ul>
+				</li>
+				<li id="two">two</li>
+				<li id="three">three</li>
+				<li id="four">four</li>
+			</ul>
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="./jquery.scrollspy.js"></script>
+		<script>
+			$('#js-scrollspy')
+				.scrollSpy({
+					nav: '.js-scrollspy-nav > li > a',
+					className: 'is-inview',
+					callback: function () {
+					}
+				})
+				.scrollSpy({
+					nav: '.js-sub-scrollspy-nav > li > a',
+					className: 'is-inview'
+				});
+		</script>
+	</body>
+</html>
