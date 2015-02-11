@@ -3,12 +3,11 @@
  *
  */
 
-function ScrollSpy (opt) {
+function ScrollSpy (wrapper, opt) {
   var doc = document;
 
-  this.wrapper = doc.querySelector(opt.wrapper);
+  this.wrapper = doc.querySelector(wrapper);
   this.nav = this.wrapper.querySelectorAll(opt.nav);
-//  this.contents = this.wrapper.querySelectorAll(opt.contents);
 
   this.contents = [];
   this.win = window;
@@ -19,6 +18,8 @@ function ScrollSpy (opt) {
   this.className = opt.className;
 
   this.callback = opt.callback;
+
+  this.init();
 }
 
 ScrollSpy.prototype.init = function () {

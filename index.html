@@ -40,25 +40,17 @@
 
 		<script src="./scrollspy.js"></script>
 		<script>
-			var spy = new ScrollSpy({
-				wrapper: '#js-scrollspy',
+			var spy = new ScrollSpy('#js-scrollspy', {
 				nav: '.js-scrollspy-nav > li > a',
-//				contents: '.js-scrollspy-content > li',
 				className: 'is-inview',
 				callback: function () {
 				}
 			});
 
-			spy.init();
-
-			var subSpy = new ScrollSpy({
-				wrapper: '#js-scrollspy',
+			var subSpy = new ScrollSpy('#js-scrollspy', {
 				nav: '.js-sub-scrollspy-nav > li > a',
-//				contents: '.js-sub-scrollspy-content > li',
 				className: 'is-inview'
 			});
-
-			subSpy.init();
 		</script>
 	</body>
 </html>
