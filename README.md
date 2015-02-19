@@ -4,6 +4,12 @@
 
 > Scrollspy library.
 
+## Installation
+
+```sh
+$ bower install scrollspy
+```
+
 ## Usage
 
 ```html
@@ -20,6 +26,8 @@
     ...
   </div>
 </div>
+...
+<script src="./bower_components/scrollspy.js"></script>
 ```
 
 ```js

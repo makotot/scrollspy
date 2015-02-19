@@ -1,8 +1,8 @@
 {
   "name": "scrollspy",
   "version": "0.0.1",
-  "description": "",
-  "main": "Gruntfile.js",
+  "description": "Scrollspy library",
+  "main": "scrollspy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
