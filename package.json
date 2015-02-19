@@ -9,9 +9,9 @@
   "author": "makotot",
   "license": "MIT",
   "devDependencies": {
-    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-uglify": "^0.8.0",
     "grunt-eslint": "^6.0.0",
-    "grunt-umd": "^2.3.0",
+    "grunt-umd": "^2.3.1",
     "jit-grunt": "^0.9.1",
     "time-grunt": "^1.0.0"
   }
