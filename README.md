@@ -1,4 +1,6 @@
-# ScrollSpy v0.0.1
+# ScrollSpy
+
+[![bower](https://img.shields.io/bower/v/scrollspy.svg)]
 
 [![DevDependencies](http://img.shields.io/david/dev/makotot/scrollspy.svg?style=flat)](https://github.com/makotot/scrollspy)
 
