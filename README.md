@@ -1,6 +1,6 @@
 # ScrollSpy
 
-[![bower](https://img.shields.io/bower/v/scrollspy.svg)]
+[![bower](https://img.shields.io/bower/v/scrollspy.svg?style=flat)](https://github.com/makotot/scrollspy)
 
 [![DevDependencies](http://img.shields.io/david/dev/makotot/scrollspy.svg?style=flat)](https://github.com/makotot/scrollspy)
 
