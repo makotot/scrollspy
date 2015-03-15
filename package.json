@@ -10,9 +10,9 @@
   "license": "MIT",
   "devDependencies": {
     "grunt-contrib-uglify": "^0.8.0",
-    "grunt-eslint": "^7.0.0",
-    "grunt-umd": "^2.3.1",
+    "grunt-eslint": "^9.0.0",
+    "grunt-umd": "^2.3.2",
     "jit-grunt": "^0.9.1",
-    "time-grunt": "^1.0.0"
+    "time-grunt": "^1.1.0"
   }
 }
