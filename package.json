@@ -16,6 +16,6 @@
     "grunt-eslint": "^13.0.0",
     "grunt-umd": "^2.3.3",
     "jit-grunt": "^0.9.1",
-    "time-grunt": "^1.2.0"
+    "time-grunt": "^1.2.1"
   }
 }
