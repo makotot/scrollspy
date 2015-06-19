@@ -1,9 +1,9 @@
 # ScrollSpy
 
-[![npm version](https://img.shields.io/npm/v/scrollspy-js.svg?style=flat)](https://github.com/makotot/scrollspy)
-[![bower version](https://img.shields.io/bower/v/scrollspy.svg?style=flat)](https://github.com/makotot/scrollspy)
-[![DevDependencies](http://img.shields.io/david/dev/makotot/scrollspy.svg?style=flat)](https://github.com/makotot/scrollspy)
-[![License](http://img.shields.io/npm/l/scrollspy-js.svg?style=flat)](https://github.com/makotot/scrollspy-js)
+[![npm version](https://img.shields.io/npm/v/scrollspy-js.svg?style=flat-square)](https://github.com/makotot/scrollspy)
+[![bower version](https://img.shields.io/bower/v/scrollspy.svg?style=flat-square)](https://github.com/makotot/scrollspy)
+[![DevDependencies](http://img.shields.io/david/dev/makotot/scrollspy.svg?style=flat-square)](https://github.com/makotot/scrollspy)
+[![License](http://img.shields.io/npm/l/scrollspy-js.svg?style=flat-square)](https://github.com/makotot/scrollspy-js)
 
 > Scrollspy library.
 
