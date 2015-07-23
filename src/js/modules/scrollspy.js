@@ -1,27 +1,3 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-(function (global){
-/**
- * ScrollSpy
- *
- */
-
-var ScrollSpy = require('./modules/scrollspy');
-
-global.ScrollSpy = module.exports = ScrollSpy;
-
-(function ($) {
-
-  $.fn.scrollSpy = function (options) {
-
-    return this.each(function () {
-      $(this).data('scrollspy', new ScrollSpy(this, options));
-    });
-  };
-
-})(jQuery);
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./modules/scrollspy":2}],2:[function(require,module,exports){
 function ScrollSpy (wrapper, opt) {
   var doc = document;
 
@@ -154,5 +130,3 @@ ScrollSpy.prototype.markNav = function (elems) {
 
 
 module.exports = ScrollSpy;
-
-},{}]},{},[1]);
