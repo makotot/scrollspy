@@ -2,7 +2,7 @@
 function ScrollSpy (wrapper, opt) {
   var doc = document;
 
-  this.wrapper = doc.querySelector(wrapper);
+  this.wrapper = (typeof wrapper === 'string') ? doc.querySelector(wrapper) : wrapper;
   this.nav = this.wrapper.querySelectorAll(opt.nav);
 
   this.contents = [];
