@@ -5,16 +5,20 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
 
-    umd: {
-      plain: {
-        src: './src/js/scrollspy.js',
-        dest: './scrollspy.js',
-        objectToExport: 'ScrollSpy',
-        globalAlias: 'ScrollSpy'
+    clean: {
+      all: ['./build']
+    },
+
+    browserify: {
+      options: {
+        standalone: 'ScrollSpy',
+        transform: ['deglobalify']
       },
-      jquery: {
-        src: './src/js/jquery.scrollspy.js',
-        dest: './jquery.scrollspy.js'
+      all: {
+        files: {
+          './build/scrollspy.js': ['./src/js/scrollspy.js'],
+          './build/jquery.scrollspy.js': ['./src/js/jquery.scrollspy.js']
+        }
       }
     },
 
@@ -26,8 +30,8 @@ module.exports = function (grunt) {
       dev: {
         options: {},
         files: {
-          './scrollspy.min.js': ['./scrollspy.js'],
-          './jquery.scrollspy.min.js': ['./jquery.scrollspy.js']
+          './build/scrollspy.min.js': ['./build/scrollspy.js'],
+          './build/jquery.scrollspy.min.js': ['./build/jquery.scrollspy.js']
         }
       }
     },
@@ -53,8 +57,8 @@ module.exports = function (grunt) {
         }
       },
       js: {
-        files: ['./src/js/*.js'],
-        tasks: ['umd'],
+        files: ['./src/js/**/*.js'],
+        tasks: ['browserify'],
         options: {
           spawn: false
         }
@@ -70,7 +74,7 @@ module.exports = function (grunt) {
 
   });
 
-  grunt.registerTask('default', ['eslint', 'umd']);
-  grunt.registerTask('serve', ['umd', 'connect', 'watch']);
-  grunt.registerTask('build', ['eslint', 'umd', 'uglify']);
+  grunt.registerTask('default', ['clean', 'eslint', 'browserify']);
+  grunt.registerTask('serve', ['clean', 'eslint', 'browserify', 'connect', 'watch']);
+  grunt.registerTask('build', ['clean', 'eslint', 'browserify', 'uglify']);
 };

@@ -1,7 +1,7 @@
 {
   "name": "scrollspy",
-  "main": "scrollspy.js",
-  "version": "0.0.1",
+  "main": "./build/scrollspy.js",
+  "version": "0.1.0",
   "homepage": "https://github.com/makotot/scrollspy",
   "authors": [
     "makotot <makoto.ttn@gmail.com>"
@@ -12,7 +12,10 @@
     "globals"
   ],
   "keywords": [
-    "scrollspy"
+    "scrollspy",
+    "jquery",
+    "scroll",
+    "umd"
   ],
   "license": "MIT",
   "ignore": [
