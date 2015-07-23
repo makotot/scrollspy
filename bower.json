@@ -1,6 +1,6 @@
 {
   "name": "scrollspy",
-  "main": "scrollspy.js",
+  "main": "./build/scrollspy.js",
   "version": "0.0.1",
   "homepage": "https://github.com/makotot/scrollspy",
   "authors": [

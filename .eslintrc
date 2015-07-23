@@ -6,14 +6,7 @@
   },
   "globals": {
     "$": true,
-    "jQuery": false,
-    "_": true,
-    "Backbone": false,
-    "angular": false,
-    "ko": false,
-    "d3": false,
-    "Vue": false,
-    "alert": false
+    "jQuery": false
   },
   "rules": {
     "quotes": [1, "single"],
