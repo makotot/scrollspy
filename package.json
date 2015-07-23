@@ -1,6 +1,6 @@
 {
   "name": "scrollspy-js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Scrollspy library",
   "main": "./src/js/scrollspy.js",
   "scripts": {
@@ -19,5 +19,11 @@
     "grunt-eslint": "^15.0.0",
     "jit-grunt": "^0.9.1",
     "time-grunt": "^1.2.1"
-  }
+  },
+  "keywords": [
+    "scrollspy",
+    "jquery",
+    "umd",
+    "scroll"
+  ]
 }
