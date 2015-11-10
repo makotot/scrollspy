@@ -9,7 +9,7 @@
 
 ## Demo
 
-http://output.jsbin.com/dosidulivi/1
+http://codepen.io/makotot/pen/YyRXOQ
 
 
 ## Installation
