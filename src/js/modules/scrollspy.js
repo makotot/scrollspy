@@ -1,12 +1,11 @@
 function ScrollSpy (wrapper, opt) {
-  var doc = document;
 
-  this.wrapper = (typeof wrapper === 'string') ? doc.querySelector(wrapper) : wrapper;
+  this.doc = document;
+  this.wrapper = (typeof wrapper === 'string') ? this.doc.querySelector(wrapper) : wrapper;
   this.nav = this.wrapper.querySelectorAll(opt.nav);
 
   this.contents = [];
   this.win = window;
-  this.body = doc.body;
 
   this.winH = this.win.innerHeight;
 
@@ -28,7 +27,7 @@ ScrollSpy.prototype.getContents = function () {
   for (var i = 0, max = this.nav.length; i < max; i++) {
     var href = this.nav[i].href;
 
-    targetList.push(document.getElementById(href.split('#')[1]));
+    targetList.push(this.doc.getElementById(href.split('#')[1]));
   }
 
   return targetList;
@@ -106,7 +105,7 @@ ScrollSpy.prototype.getElemsViewState = function () {
 
 ScrollSpy.prototype.isInView = function (el) {
   var winH = this.winH,
-    scrollTop = this.body.scrollTop,
+    scrollTop = this.doc.documentElement.scrollTop || this.doc.body.scrollTop,
     scrollBottom = scrollTop + winH,
     elTop = el.offsetTop,
     elBottom = elTop + el.offsetHeight;
