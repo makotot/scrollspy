@@ -23,7 +23,7 @@ module.exports = function (grunt) {
     },
 
     eslint: {
-      target: ['./src/js/*.js']
+      target: ['./src/js/**/*.js']
     },
 
     uglify: {
