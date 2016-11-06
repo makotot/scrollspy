@@ -109,7 +109,8 @@ ScrollSpy.prototype.isInView = function (el) {
   var winH = this.winH,
     scrollTop = this.body.scrollTop,
     scrollBottom = scrollTop + winH,
-    elTop = el.offsetTop,
+    rect = el.getBoundingClientRect(),
+    elTop = rect.top + scrollTop,
     elBottom = elTop + el.offsetHeight;
 
   return (elTop < scrollBottom) && (elBottom > scrollTop);
