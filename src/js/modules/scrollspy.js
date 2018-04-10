@@ -12,6 +12,8 @@ function ScrollSpy (wrapper, opt) {
   this.className = opt.className;
 
   this.callback = opt.callback;
+  
+  this.offsetTop = opt.offsetTop;
 
   this.init();
 }
@@ -109,7 +111,7 @@ ScrollSpy.prototype.isInView = function (el) {
     scrollBottom = scrollTop + winH,
     rect = el.getBoundingClientRect(),
     elTop = rect.top + scrollTop,
-    elBottom = elTop + el.offsetHeight;
+    elBottom = elTop + el.offsetHeight - this.offsetTop;
 
   return (elTop < scrollBottom) && (elBottom > scrollTop);
 };
