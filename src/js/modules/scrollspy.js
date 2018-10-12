@@ -13,6 +13,8 @@ function ScrollSpy (wrapper, opt) {
 
   this.callback = opt.callback;
 
+  this.offset = opt.offset;
+
   this.init();
 }
 
@@ -108,7 +110,7 @@ ScrollSpy.prototype.isInView = function (el) {
     scrollTop = this.doc.documentElement.scrollTop || this.doc.body.scrollTop,
     scrollBottom = scrollTop + winH,
     rect = el.getBoundingClientRect(),
-    elTop = rect.top + scrollTop,
+    elTop = rect.top + (scrollTop - (this.offset || 0)),
     elBottom = elTop + el.offsetHeight;
 
   return (elTop < scrollBottom) && (elBottom > scrollTop);
